@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "scripts/train.py", line 540, in <module>
+    train(hyp, opt, device, tb_writer, wandb)
+  File "scripts/train.py", line 147, in train
+    if ckpt['optimizer'] is not None:
+UnboundLocalError: local variable 'ckpt' referenced before assignment

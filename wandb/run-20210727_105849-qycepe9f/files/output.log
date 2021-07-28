@@ -1,0 +1,67 @@
+[34m[1mtrain: [39m[22mScanning '/data/aza_s/SIIM/dataset/coco_format/labels/train.cache' for images and labels... 5067 found, 0 missing, 0 empty, 0 corrupted: 100%|█| 5067/5067 [00:00<?, ?it/s]
+[34m[1mval: [39m[22mScanning '/data/aza_s/SIIM/dataset/coco_format/labels/valid.cache' for images and labels... 1267 found, 0 missing, 0 empty, 0 corrupted: 100%|███| 1267/1267 [00:00<?, ?it/s]
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+Plotting labels...
+[34m[1mautoanchor: [39m[22mEvolving anchors with Genetic Algorithm: fitness = 0.8486: 100%|████████████████████████████████████████████████████████████████| 1000/1000 [00:00<00:00, 1115.47it/s]
+Image sizes 640 train, 640 test
+Using 8 dataloader workers
+Logging results to runs/train/exp9
+Starting training for 300 epochs...
+     Epoch   gpu_mem       box       obj       cls     total   targets  img_size
+  0%|                                                                                                                                                     | 0/317 [00:00<?, ?it/s]/home/ubuntu/miniconda3/envs/temp/lib/python3.7/site-packages/torch/nn/functional.py:718: UserWarning: Named tensors and all their associated APIs are an experimental feature and subject to change. Please do not use them for anything important until they are released as stable. (Triggered internally at  /pytorch/c10/core/TensorImpl.h:1156.)
+  return torch.max_pool2d(input, kernel_size, stride, padding, dilation, ceil_mode)
+[34m[1mautoanchor: [39m[22mAnalyzing anchors... anchors/target = 3.44, Best Possible Recall (BPR) = 0.7931. Attempting to improve anchors, please wait...
+[34m[1mautoanchor: [39m[22mWARNING: Extremely small objects found. 1637 of 7912 labels are < 3 pixels in size.
+[34m[1mautoanchor: [39m[22mRunning kmeans for 9 anchors on 6275 points...
+[34m[1mautoanchor: [39m[22mthr=0.25: 0.7926 best possible recall, 6.87 anchors past thr
+[34m[1mautoanchor: [39m[22mn=9, img_size=640, metric_all=0.445/0.669-mean/best, past_thr=0.575-mean: 66,101,  110,128,  96,215,  157,158,  116,310,  152,259,  207,241,  168,368,  223,415
+[34m[1mautoanchor: [39m[22mthr=0.25: 0.7927 best possible recall, 6.84 anchors past thr
+[34m[1mautoanchor: [39m[22mn=9, img_size=640, metric_all=0.447/0.673-mean/best, past_thr=0.580-mean: 69,87,  103,118,  91,181,  154,151,  109,271,  141,229,  184,262,  154,333,  211,388
+[34m[1mautoanchor: [39m[22mOriginal anchors better than new anchors. Proceeding with original anchors.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     0/299     2.42G    0.0818   0.02696    0.4847    0.1088        21       640: 100%|█████████████████████████████████████████████████████████| 317/317 [00:50<00:00,  6.30it/s]
+
+
+
+
+
+               Class      Images     Targets           P           R      mAP@.5  mAP@.5:.95:  98%|█████████████████████████████████████████████▊ | 39/40 [00:10<00:00,  4.49it/s]
+
+               Class      Images     Targets           P           R      mAP@.5  mAP@.5:.95: 100%|███████████████████████████████████████████████| 40/40 [00:11<00:00,  3.57it/s]
+Bin acc: 1.0  0.0  0.4749000072479248  0.0  0.0. mAP: 0.09630901430306185
+Images sizes do not match. This will causes images to be display incorrectly in the UI.
+     Epoch   gpu_mem       box       obj       cls     total   targets  img_size
+
+
+
+
+

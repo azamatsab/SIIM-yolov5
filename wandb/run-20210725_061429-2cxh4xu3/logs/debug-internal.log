@@ -1,0 +1,169 @@
+2021-07-25 06:14:30,131 INFO    MainThread:209547 [internal.py:wandb_internal():91] W&B internal server running at pid: 209547, started at: 2021-07-25 06:14:30.131663
+2021-07-25 06:14:30,135 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: check_version
+2021-07-25 06:14:30,135 INFO    WriterThread:209547 [datastore.py:open_for_write():80] open: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/run-2cxh4xu3.wandb
+2021-07-25 06:14:30,139 DEBUG   SenderThread:209547 [sender.py:send():179] send: header
+2021-07-25 06:14:30,139 DEBUG   SenderThread:209547 [sender.py:send_request():193] send_request: check_version
+2021-07-25 06:14:30,542 DEBUG   SenderThread:209547 [sender.py:send():179] send: run
+2021-07-25 06:14:30,558 INFO    SenderThread:209547 [sender.py:_maybe_setup_resume():414] checking resume status for None/YOLOv5/2cxh4xu3
+2021-07-25 06:14:31,299 INFO    SenderThread:209547 [dir_watcher.py:__init__():168] watching files in: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files
+2021-07-25 06:14:31,300 INFO    SenderThread:209547 [sender.py:_start_run_threads():719] run started: 2cxh4xu3 with start time 1627193669
+2021-07-25 06:14:31,300 DEBUG   SenderThread:209547 [sender.py:send():179] send: summary
+2021-07-25 06:14:31,301 INFO    SenderThread:209547 [sender.py:_save_file():841] saving file wandb-summary.json with policy end
+2021-07-25 06:14:31,305 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: run_start
+2021-07-25 06:14:31,313 DEBUG   HandlerThread:209547 [meta.py:__init__():39] meta init
+2021-07-25 06:14:31,313 DEBUG   HandlerThread:209547 [meta.py:__init__():53] meta init done
+2021-07-25 06:14:31,313 DEBUG   HandlerThread:209547 [meta.py:probe():210] probe
+2021-07-25 06:14:31,322 DEBUG   HandlerThread:209547 [meta.py:_setup_git():200] setup git
+2021-07-25 06:14:31,340 DEBUG   HandlerThread:209547 [meta.py:_setup_git():207] setup git done
+2021-07-25 06:14:31,341 DEBUG   HandlerThread:209547 [meta.py:_save_pip():57] save pip
+2021-07-25 06:14:31,342 DEBUG   HandlerThread:209547 [meta.py:_save_pip():71] save pip done
+2021-07-25 06:14:31,342 DEBUG   HandlerThread:209547 [meta.py:_save_conda():78] save conda
+2021-07-25 06:14:32,304 INFO    Thread-8  :209547 [dir_watcher.py:_on_file_created():216] file/dir created: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/wandb-summary.json
+2021-07-25 06:14:32,304 INFO    Thread-8  :209547 [dir_watcher.py:_on_file_created():216] file/dir created: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/requirements.txt
+2021-07-25 06:14:32,305 INFO    Thread-8  :209547 [dir_watcher.py:_on_file_created():216] file/dir created: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/conda-environment.yaml
+2021-07-25 06:14:33,300 INFO    Thread-8  :209547 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/conda-environment.yaml
+2021-07-25 06:14:33,331 DEBUG   HandlerThread:209547 [meta.py:_save_conda():86] save conda done
+2021-07-25 06:14:33,331 DEBUG   HandlerThread:209547 [meta.py:probe():252] probe done
+2021-07-25 06:14:33,378 DEBUG   SenderThread:209547 [sender.py:send():179] send: files
+2021-07-25 06:14:33,379 INFO    SenderThread:209547 [sender.py:_save_file():841] saving file wandb-metadata.json with policy now
+2021-07-25 06:14:33,389 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: stop_status
+2021-07-25 06:14:33,390 DEBUG   SenderThread:209547 [sender.py:send_request():193] send_request: stop_status
+2021-07-25 06:14:34,301 INFO    Thread-8  :209547 [dir_watcher.py:_on_file_created():216] file/dir created: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/wandb-metadata.json
+2021-07-25 06:14:34,302 INFO    Thread-8  :209547 [dir_watcher.py:_on_file_created():216] file/dir created: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/output.log
+2021-07-25 06:14:34,305 INFO    Thread-11 :209547 [upload_job.py:push():137] Uploaded file /tmp/tmpkesuc78dwandb/1e6pdis2-wandb-metadata.json
+2021-07-25 06:14:36,302 INFO    Thread-8  :209547 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/output.log
+2021-07-25 06:14:40,304 INFO    Thread-8  :209547 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/output.log
+2021-07-25 06:14:40,376 DEBUG   SenderThread:209547 [sender.py:send():179] send: files
+2021-07-25 06:14:40,377 INFO    SenderThread:209547 [sender.py:_save_file():841] saving file media/images/Labels_0_0.jpg with policy now
+2021-07-25 06:14:40,377 DEBUG   SenderThread:209547 [sender.py:send():179] send: files
+2021-07-25 06:14:40,378 INFO    SenderThread:209547 [sender.py:_save_file():841] saving file media/images/Labels_0_1.jpg with policy now
+2021-07-25 06:14:40,387 DEBUG   SenderThread:209547 [sender.py:send():179] send: history
+2021-07-25 06:14:40,387 DEBUG   SenderThread:209547 [sender.py:send():179] send: summary
+2021-07-25 06:14:40,412 INFO    SenderThread:209547 [sender.py:_save_file():841] saving file wandb-summary.json with policy end
+2021-07-25 06:14:41,305 INFO    Thread-8  :209547 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/wandb-summary.json
+2021-07-25 06:14:41,305 INFO    Thread-8  :209547 [dir_watcher.py:_on_file_created():216] file/dir created: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/media/images/Labels_0_1.jpg
+2021-07-25 06:14:41,306 INFO    Thread-8  :209547 [dir_watcher.py:_on_file_created():216] file/dir created: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/media/images/Labels_0_0.jpg
+2021-07-25 06:14:41,306 INFO    Thread-8  :209547 [dir_watcher.py:_on_file_created():216] file/dir created: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/media
+2021-07-25 06:14:41,306 INFO    Thread-8  :209547 [dir_watcher.py:_on_file_created():216] file/dir created: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/media/images
+2021-07-25 06:14:41,793 INFO    Thread-13 :209547 [upload_job.py:push():137] Uploaded file /tmp/tmpkesuc78dwandb/2cqvxc6g-media/images/Labels_0_1.jpg
+2021-07-25 06:14:41,957 INFO    Thread-12 :209547 [upload_job.py:push():137] Uploaded file /tmp/tmpkesuc78dwandb/ky00fns4-media/images/Labels_0_0.jpg
+2021-07-25 06:14:42,306 INFO    Thread-8  :209547 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/output.log
+2021-07-25 06:14:42,612 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-25 06:14:42,612 DEBUG   SenderThread:209547 [sender.py:send():179] send: telemetry
+2021-07-25 06:14:42,612 DEBUG   SenderThread:209547 [sender.py:send():179] send: exit
+2021-07-25 06:14:42,613 INFO    SenderThread:209547 [sender.py:send_exit():287] handling exit code: 1
+2021-07-25 06:14:42,613 INFO    SenderThread:209547 [sender.py:send_exit():295] send defer
+2021-07-25 06:14:42,613 DEBUG   SenderThread:209547 [sender.py:send_request():193] send_request: poll_exit
+2021-07-25 06:14:42,614 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: defer
+2021-07-25 06:14:42,614 INFO    HandlerThread:209547 [handler.py:handle_request_defer():141] handle defer: 0
+2021-07-25 06:14:42,614 DEBUG   SenderThread:209547 [sender.py:send_request():193] send_request: defer
+2021-07-25 06:14:42,614 INFO    SenderThread:209547 [sender.py:send_request_defer():304] handle sender defer: 0
+2021-07-25 06:14:42,615 INFO    SenderThread:209547 [sender.py:transition_state():308] send defer: 1
+2021-07-25 06:14:42,615 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: defer
+2021-07-25 06:14:42,615 INFO    HandlerThread:209547 [handler.py:handle_request_defer():141] handle defer: 1
+2021-07-25 06:14:42,798 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-25 06:14:42,799 DEBUG   SenderThread:209547 [sender.py:send_request():193] send_request: defer
+2021-07-25 06:14:42,801 INFO    SenderThread:209547 [sender.py:send_request_defer():304] handle sender defer: 1
+2021-07-25 06:14:42,802 INFO    SenderThread:209547 [sender.py:transition_state():308] send defer: 2
+2021-07-25 06:14:42,802 DEBUG   SenderThread:209547 [sender.py:send_request():193] send_request: poll_exit
+2021-07-25 06:14:42,803 DEBUG   SenderThread:209547 [sender.py:send():179] send: stats
+2021-07-25 06:14:42,805 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: defer
+2021-07-25 06:14:42,810 INFO    HandlerThread:209547 [handler.py:handle_request_defer():141] handle defer: 2
+2021-07-25 06:14:42,811 DEBUG   SenderThread:209547 [sender.py:send_request():193] send_request: defer
+2021-07-25 06:14:42,811 INFO    SenderThread:209547 [sender.py:send_request_defer():304] handle sender defer: 2
+2021-07-25 06:14:42,811 INFO    SenderThread:209547 [sender.py:transition_state():308] send defer: 3
+2021-07-25 06:14:42,812 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: defer
+2021-07-25 06:14:42,812 INFO    HandlerThread:209547 [handler.py:handle_request_defer():141] handle defer: 3
+2021-07-25 06:14:42,813 DEBUG   SenderThread:209547 [sender.py:send():179] send: summary
+2021-07-25 06:14:42,846 INFO    SenderThread:209547 [sender.py:_save_file():841] saving file wandb-summary.json with policy end
+2021-07-25 06:14:42,846 DEBUG   SenderThread:209547 [sender.py:send_request():193] send_request: defer
+2021-07-25 06:14:42,847 INFO    SenderThread:209547 [sender.py:send_request_defer():304] handle sender defer: 3
+2021-07-25 06:14:42,847 INFO    SenderThread:209547 [sender.py:transition_state():308] send defer: 4
+2021-07-25 06:14:42,847 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: defer
+2021-07-25 06:14:42,847 INFO    HandlerThread:209547 [handler.py:handle_request_defer():141] handle defer: 4
+2021-07-25 06:14:42,847 DEBUG   SenderThread:209547 [sender.py:send_request():193] send_request: defer
+2021-07-25 06:14:42,848 INFO    SenderThread:209547 [sender.py:send_request_defer():304] handle sender defer: 4
+2021-07-25 06:14:42,905 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-25 06:14:43,287 INFO    SenderThread:209547 [sender.py:transition_state():308] send defer: 5
+2021-07-25 06:14:43,287 DEBUG   SenderThread:209547 [sender.py:send_request():193] send_request: poll_exit
+2021-07-25 06:14:43,288 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: defer
+2021-07-25 06:14:43,289 INFO    HandlerThread:209547 [handler.py:handle_request_defer():141] handle defer: 5
+2021-07-25 06:14:43,289 DEBUG   SenderThread:209547 [sender.py:send_request():193] send_request: defer
+2021-07-25 06:14:43,289 INFO    SenderThread:209547 [sender.py:send_request_defer():304] handle sender defer: 5
+2021-07-25 06:14:43,289 INFO    SenderThread:209547 [dir_watcher.py:finish():282] shutting down directory watcher
+2021-07-25 06:14:43,307 INFO    Thread-8  :209547 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/config.yaml
+2021-07-25 06:14:43,308 INFO    SenderThread:209547 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/output.log
+2021-07-25 06:14:43,309 INFO    SenderThread:209547 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/wandb-summary.json
+2021-07-25 06:14:43,309 INFO    SenderThread:209547 [dir_watcher.py:finish():312] scan: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files
+2021-07-25 06:14:43,309 INFO    SenderThread:209547 [dir_watcher.py:finish():318] scan save: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/wandb-summary.json wandb-summary.json
+2021-07-25 06:14:43,309 INFO    SenderThread:209547 [dir_watcher.py:finish():318] scan save: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/output.log output.log
+2021-07-25 06:14:43,310 INFO    SenderThread:209547 [dir_watcher.py:finish():318] scan save: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/config.yaml config.yaml
+2021-07-25 06:14:43,310 INFO    SenderThread:209547 [dir_watcher.py:finish():318] scan save: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/wandb-metadata.json wandb-metadata.json
+2021-07-25 06:14:43,318 INFO    SenderThread:209547 [dir_watcher.py:finish():318] scan save: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/requirements.txt requirements.txt
+2021-07-25 06:14:43,326 INFO    SenderThread:209547 [dir_watcher.py:finish():318] scan save: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/conda-environment.yaml conda-environment.yaml
+2021-07-25 06:14:43,343 INFO    SenderThread:209547 [dir_watcher.py:finish():318] scan save: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/media/images/Labels_0_1.jpg media/images/Labels_0_1.jpg
+2021-07-25 06:14:43,348 INFO    SenderThread:209547 [dir_watcher.py:finish():318] scan save: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/media/images/Labels_0_0.jpg media/images/Labels_0_0.jpg
+2021-07-25 06:14:43,350 INFO    SenderThread:209547 [sender.py:transition_state():308] send defer: 6
+2021-07-25 06:14:43,351 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: defer
+2021-07-25 06:14:43,352 INFO    HandlerThread:209547 [handler.py:handle_request_defer():141] handle defer: 6
+2021-07-25 06:14:43,352 DEBUG   SenderThread:209547 [sender.py:send_request():193] send_request: defer
+2021-07-25 06:14:43,352 INFO    SenderThread:209547 [sender.py:send_request_defer():304] handle sender defer: 6
+2021-07-25 06:14:43,353 INFO    SenderThread:209547 [file_pusher.py:finish():177] shutting down file pusher
+2021-07-25 06:14:43,390 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-25 06:14:43,390 DEBUG   SenderThread:209547 [sender.py:send_request():193] send_request: poll_exit
+2021-07-25 06:14:43,493 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-25 06:14:43,493 DEBUG   SenderThread:209547 [sender.py:send_request():193] send_request: poll_exit
+2021-07-25 06:14:43,595 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-25 06:14:43,595 DEBUG   SenderThread:209547 [sender.py:send_request():193] send_request: poll_exit
+2021-07-25 06:14:43,698 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-25 06:14:43,698 DEBUG   SenderThread:209547 [sender.py:send_request():193] send_request: poll_exit
+2021-07-25 06:14:43,801 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-25 06:14:43,802 DEBUG   SenderThread:209547 [sender.py:send_request():193] send_request: poll_exit
+2021-07-25 06:14:43,904 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-25 06:14:43,904 DEBUG   SenderThread:209547 [sender.py:send_request():193] send_request: poll_exit
+2021-07-25 06:14:44,006 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-25 06:14:44,007 DEBUG   SenderThread:209547 [sender.py:send_request():193] send_request: poll_exit
+2021-07-25 06:14:44,109 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-25 06:14:44,109 DEBUG   SenderThread:209547 [sender.py:send_request():193] send_request: poll_exit
+2021-07-25 06:14:44,191 INFO    Thread-14 :209547 [upload_job.py:push():137] Uploaded file /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/wandb-summary.json
+2021-07-25 06:14:44,200 INFO    Thread-16 :209547 [upload_job.py:push():137] Uploaded file /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/config.yaml
+2021-07-25 06:14:44,211 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-25 06:14:44,212 DEBUG   SenderThread:209547 [sender.py:send_request():193] send_request: poll_exit
+2021-07-25 06:14:44,246 INFO    Thread-15 :209547 [upload_job.py:push():137] Uploaded file /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/output.log
+2021-07-25 06:14:44,259 INFO    Thread-17 :209547 [upload_job.py:push():137] Uploaded file /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/requirements.txt
+2021-07-25 06:14:44,264 INFO    Thread-18 :209547 [upload_job.py:push():137] Uploaded file /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/files/conda-environment.yaml
+2021-07-25 06:14:44,314 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-25 06:14:44,314 DEBUG   SenderThread:209547 [sender.py:send_request():193] send_request: poll_exit
+2021-07-25 06:14:44,416 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-25 06:14:44,416 DEBUG   SenderThread:209547 [sender.py:send_request():193] send_request: poll_exit
+2021-07-25 06:14:44,465 INFO    Thread-7  :209547 [sender.py:transition_state():308] send defer: 7
+2021-07-25 06:14:44,466 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: defer
+2021-07-25 06:14:44,466 INFO    HandlerThread:209547 [handler.py:handle_request_defer():141] handle defer: 7
+2021-07-25 06:14:44,466 DEBUG   SenderThread:209547 [sender.py:send_request():193] send_request: defer
+2021-07-25 06:14:44,466 INFO    SenderThread:209547 [sender.py:send_request_defer():304] handle sender defer: 7
+2021-07-25 06:14:44,518 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-25 06:14:44,888 INFO    SenderThread:209547 [sender.py:transition_state():308] send defer: 8
+2021-07-25 06:14:44,888 DEBUG   SenderThread:209547 [sender.py:send_request():193] send_request: poll_exit
+2021-07-25 06:14:44,889 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: defer
+2021-07-25 06:14:44,889 INFO    HandlerThread:209547 [handler.py:handle_request_defer():141] handle defer: 8
+2021-07-25 06:14:44,889 DEBUG   SenderThread:209547 [sender.py:send_request():193] send_request: defer
+2021-07-25 06:14:44,890 INFO    SenderThread:209547 [sender.py:send_request_defer():304] handle sender defer: 8
+2021-07-25 06:14:44,890 INFO    SenderThread:209547 [sender.py:transition_state():308] send defer: 9
+2021-07-25 06:14:44,891 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: defer
+2021-07-25 06:14:44,891 DEBUG   SenderThread:209547 [sender.py:send():179] send: final
+2021-07-25 06:14:44,891 INFO    HandlerThread:209547 [handler.py:handle_request_defer():141] handle defer: 9
+2021-07-25 06:14:44,891 DEBUG   SenderThread:209547 [sender.py:send():179] send: footer
+2021-07-25 06:14:44,892 DEBUG   SenderThread:209547 [sender.py:send_request():193] send_request: defer
+2021-07-25 06:14:44,892 INFO    SenderThread:209547 [sender.py:send_request_defer():304] handle sender defer: 9
+2021-07-25 06:14:44,990 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-25 06:14:44,991 DEBUG   SenderThread:209547 [sender.py:send_request():193] send_request: poll_exit
+2021-07-25 06:14:44,991 INFO    SenderThread:209547 [file_pusher.py:join():182] waiting for file pusher
+2021-07-25 06:14:44,993 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: get_summary
+2021-07-25 06:14:44,995 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: sampled_history
+2021-07-25 06:14:44,997 DEBUG   HandlerThread:209547 [handler.py:handle_request():124] handle_request: shutdown
+2021-07-25 06:14:44,997 INFO    HandlerThread:209547 [handler.py:finish():638] shutting down handler
+2021-07-25 06:14:45,891 INFO    WriterThread:209547 [datastore.py:close():288] close: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210725_061429-2cxh4xu3/run-2cxh4xu3.wandb
+2021-07-25 06:14:45,992 INFO    SenderThread:209547 [sender.py:finish():945] shutting down sender
+2021-07-25 06:14:45,992 INFO    SenderThread:209547 [file_pusher.py:finish():177] shutting down file pusher
+2021-07-25 06:14:45,992 INFO    SenderThread:209547 [file_pusher.py:join():182] waiting for file pusher
+2021-07-25 06:14:45,997 INFO    MainThread:209547 [internal.py:handle_exit():78] Internal process exited

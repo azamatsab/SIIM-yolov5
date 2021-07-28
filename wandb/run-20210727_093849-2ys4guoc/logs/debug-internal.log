@@ -1,0 +1,134 @@
+2021-07-27 09:38:50,546 INFO    MainThread:172509 [internal.py:wandb_internal():91] W&B internal server running at pid: 172509, started at: 2021-07-27 09:38:50.546486
+2021-07-27 09:38:50,550 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: check_version
+2021-07-27 09:38:50,550 INFO    WriterThread:172509 [datastore.py:open_for_write():80] open: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_093849-2ys4guoc/run-2ys4guoc.wandb
+2021-07-27 09:38:50,554 DEBUG   SenderThread:172509 [sender.py:send():179] send: header
+2021-07-27 09:38:50,554 DEBUG   SenderThread:172509 [sender.py:send_request():193] send_request: check_version
+2021-07-27 09:38:50,953 DEBUG   SenderThread:172509 [sender.py:send():179] send: run
+2021-07-27 09:38:50,968 INFO    SenderThread:172509 [sender.py:_maybe_setup_resume():414] checking resume status for None/YOLOv5/2ys4guoc
+2021-07-27 09:38:51,352 INFO    SenderThread:172509 [sender.py:_maybe_setup_resume():472] configured resuming with: {'step': 47, 'history': 47, 'events': 428, 'output': 4171, 'runtime': 14155, 'summary': {'train/box_loss': 0.04912874847650528, 'train/obj_loss': 0.02069585584104061, 'metrics/mAP_0.5': 0.3739030605079957, '_step': 46, 'x/lr0': 0.009564026096753471, 'x/lr2': 0.009564026096753471, '_timestamp': 1627376423, 'x/lr1': 0.009564026096753471, '_runtime': 14121, 'Mosaics': {'captions': ['train_batch2.jpg', 'train_batch0.jpg', 'train_batch1.jpg'], '_type': 'images/separated', 'count': 3, 'width': 1280, 'format': 'jpg', 'height': 1280}, 'val/cls_loss': 0, 'train/cls_loss': 0.3135158121585846, 'metrics/precision': 0.516036120946198, 'metrics/mAP_0.5:0.95': 0.11502311789645604, 'Labels': {'count': 2, 'width': 2000, 'format': 'jpg', 'height': 2000, 'captions': ['labels_correlogram.jpg', 'labels.jpg'], '_type': 'images/separated'}, 'val/box_loss': 0.049925968050956726, 'val/obj_loss': 0.010919452644884586, 'metrics/recall': 0.41191317516405856}, 'config': {'cfg': {'desc': None, 'value': 'configs/model_efficientnet.yaml'}, 'hyp': {'desc': None, 'value': {'box': 0.05, 'cls': 0.5, 'lr0': 0.01, 'lrf': 0.2, 'obj': 1, 'hsv_h': 0.015, 'hsv_s': 0.7, 'hsv_v': 0.4, 'iou_t': 0.2, 'mixup': 0, 'scale': 0.5, 'shear': 0, 'cls_pw': 1, 'fliplr': 0.5, 'flipud': 0, 'mosaic': 1, 'obj_pw': 1, 'degrees': 0, 'anchor_t': 4, 'fl_gamma': 0, 'momentum': 0.937, 'translate': 0.1, 'perspective': 0, 'weight_decay': 0.0005, 'warmup_epochs': 3, 'warmup_bias_lr': 0.1, 'warmup_momentum': 0.8}}, 'adam': {'desc': None, 'value': False}, 'data': {'desc': None, 'value': 'configs/data.yaml'}, 'name': {'desc': None, 'value': 'exp'}, 'quad': {'desc': None, 'value': False}, 'rect': {'desc': None, 'value': False}, '_wandb': {'desc': None, 'value': {'t': {'1': [1, 5], '2': [1, 5], '3': [5], '4': '3.7.10', '5': '0.10.33', '8': [2, 5]}, 'framework': 'torch', 'cli_version': '0.10.33', 'is_jupyter_run': False, 'python_version': '3.7.10', 'is_kaggle_kernel': True}}, 'bucket': {'desc': None, 'value': ''}, 'device': {'desc': None, 'value': '6'}, 'epochs': {'desc': None, 'value': 300}, 'evolve': {'desc': None, 'value': False}, 'nosave': {'desc': None, 'value': False}, 'notest': {'desc': None, 'value': False}, 'resume': {'desc': None, 'value': True}, 'project': {'desc': None, 'value': 'runs/train'}, 'sync_bn': {'desc': None, 'value': False}, 'weights': {'desc': None, 'value': 'runs/train/exp2/weights/last.pt'}, 'workers': {'desc': None, 'value': 8}, 'exist_ok': {'desc': None, 'value': False}, 'img_size': {'desc': None, 'value': [640, 640]}, 'log_imgs': {'desc': None, 'value': 16}, 'save_dir': {'desc': None, 'value': 'runs/train/exp2'}, 'linear_lr': {'desc': None, 'value': False}, 'batch_size': {'desc': None, 'value': 16}, 'local_rank': {'desc': None, 'value': -1}, 'single_cls': {'desc': None, 'value': False}, 'world_size': {'desc': None, 'value': 1}, 'global_rank': {'desc': None, 'value': -1}, 'multi_scale': {'desc': None, 'value': False}, 'cache_images': {'desc': None, 'value': False}, 'noautoanchor': {'desc': None, 'value': False}, 'image_weights': {'desc': None, 'value': False}, 'log_artifacts': {'desc': None, 'value': False}, 'total_batch_size': {'desc': None, 'value': 16}}, 'resumed': True}
+2021-07-27 09:38:51,848 INFO    SenderThread:172509 [dir_watcher.py:__init__():168] watching files in: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_093849-2ys4guoc/files
+2021-07-27 09:38:51,849 INFO    SenderThread:172509 [sender.py:_start_run_threads():719] run started: 2ys4guoc with start time 1627364574
+2021-07-27 09:38:51,849 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: run_start
+2021-07-27 09:38:51,850 DEBUG   SenderThread:172509 [sender.py:send():179] send: summary
+2021-07-27 09:38:51,851 INFO    SenderThread:172509 [sender.py:_save_file():841] saving file wandb-summary.json with policy end
+2021-07-27 09:38:51,912 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: stop_status
+2021-07-27 09:38:51,912 DEBUG   SenderThread:172509 [sender.py:send_request():193] send_request: stop_status
+2021-07-27 09:38:52,850 INFO    Thread-8  :172509 [dir_watcher.py:_on_file_created():216] file/dir created: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_093849-2ys4guoc/files/output.log
+2021-07-27 09:38:52,851 INFO    Thread-8  :172509 [dir_watcher.py:_on_file_created():216] file/dir created: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_093849-2ys4guoc/files/wandb-summary.json
+2021-07-27 09:38:54,850 INFO    Thread-8  :172509 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_093849-2ys4guoc/files/output.log
+2021-07-27 09:38:56,850 INFO    Thread-8  :172509 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_093849-2ys4guoc/files/output.log
+2021-07-27 09:38:58,851 INFO    Thread-8  :172509 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_093849-2ys4guoc/files/output.log
+2021-07-27 09:38:59,763 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-27 09:38:59,764 DEBUG   SenderThread:172509 [sender.py:send():179] send: telemetry
+2021-07-27 09:38:59,764 DEBUG   SenderThread:172509 [sender.py:send():179] send: exit
+2021-07-27 09:38:59,764 INFO    SenderThread:172509 [sender.py:send_exit():287] handling exit code: 1
+2021-07-27 09:38:59,764 INFO    SenderThread:172509 [sender.py:send_exit():295] send defer
+2021-07-27 09:38:59,765 DEBUG   SenderThread:172509 [sender.py:send_request():193] send_request: poll_exit
+2021-07-27 09:38:59,765 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: defer
+2021-07-27 09:38:59,765 INFO    HandlerThread:172509 [handler.py:handle_request_defer():141] handle defer: 0
+2021-07-27 09:38:59,766 DEBUG   SenderThread:172509 [sender.py:send_request():193] send_request: defer
+2021-07-27 09:38:59,766 INFO    SenderThread:172509 [sender.py:send_request_defer():304] handle sender defer: 0
+2021-07-27 09:38:59,766 INFO    SenderThread:172509 [sender.py:transition_state():308] send defer: 1
+2021-07-27 09:38:59,766 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: defer
+2021-07-27 09:38:59,766 INFO    HandlerThread:172509 [handler.py:handle_request_defer():141] handle defer: 1
+2021-07-27 09:38:59,852 INFO    Thread-8  :172509 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_093849-2ys4guoc/files/output.log
+2021-07-27 09:38:59,981 DEBUG   SenderThread:172509 [sender.py:send_request():193] send_request: defer
+2021-07-27 09:38:59,982 INFO    SenderThread:172509 [sender.py:send_request_defer():304] handle sender defer: 1
+2021-07-27 09:38:59,982 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-27 09:38:59,982 INFO    SenderThread:172509 [sender.py:transition_state():308] send defer: 2
+2021-07-27 09:38:59,983 DEBUG   SenderThread:172509 [sender.py:send_request():193] send_request: poll_exit
+2021-07-27 09:38:59,984 DEBUG   SenderThread:172509 [sender.py:send():179] send: stats
+2021-07-27 09:38:59,984 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: defer
+2021-07-27 09:38:59,985 INFO    HandlerThread:172509 [handler.py:handle_request_defer():141] handle defer: 2
+2021-07-27 09:38:59,986 DEBUG   SenderThread:172509 [sender.py:send_request():193] send_request: defer
+2021-07-27 09:38:59,986 INFO    SenderThread:172509 [sender.py:send_request_defer():304] handle sender defer: 2
+2021-07-27 09:38:59,986 INFO    SenderThread:172509 [sender.py:transition_state():308] send defer: 3
+2021-07-27 09:38:59,986 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: defer
+2021-07-27 09:38:59,987 INFO    HandlerThread:172509 [handler.py:handle_request_defer():141] handle defer: 3
+2021-07-27 09:38:59,987 DEBUG   SenderThread:172509 [sender.py:send():179] send: summary
+2021-07-27 09:39:00,019 INFO    SenderThread:172509 [sender.py:_save_file():841] saving file wandb-summary.json with policy end
+2021-07-27 09:39:00,019 DEBUG   SenderThread:172509 [sender.py:send_request():193] send_request: defer
+2021-07-27 09:39:00,019 INFO    SenderThread:172509 [sender.py:send_request_defer():304] handle sender defer: 3
+2021-07-27 09:39:00,019 INFO    SenderThread:172509 [sender.py:transition_state():308] send defer: 4
+2021-07-27 09:39:00,020 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: defer
+2021-07-27 09:39:00,020 INFO    HandlerThread:172509 [handler.py:handle_request_defer():141] handle defer: 4
+2021-07-27 09:39:00,020 DEBUG   SenderThread:172509 [sender.py:send_request():193] send_request: defer
+2021-07-27 09:39:00,020 INFO    SenderThread:172509 [sender.py:send_request_defer():304] handle sender defer: 4
+2021-07-27 09:39:00,086 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-27 09:39:00,427 INFO    SenderThread:172509 [sender.py:transition_state():308] send defer: 5
+2021-07-27 09:39:00,427 DEBUG   SenderThread:172509 [sender.py:send_request():193] send_request: poll_exit
+2021-07-27 09:39:00,428 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: defer
+2021-07-27 09:39:00,428 INFO    HandlerThread:172509 [handler.py:handle_request_defer():141] handle defer: 5
+2021-07-27 09:39:00,428 DEBUG   SenderThread:172509 [sender.py:send_request():193] send_request: defer
+2021-07-27 09:39:00,428 INFO    SenderThread:172509 [sender.py:send_request_defer():304] handle sender defer: 5
+2021-07-27 09:39:00,428 INFO    SenderThread:172509 [dir_watcher.py:finish():282] shutting down directory watcher
+2021-07-27 09:39:00,530 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-27 09:39:00,852 INFO    Thread-8  :172509 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_093849-2ys4guoc/files/config.yaml
+2021-07-27 09:39:00,853 INFO    SenderThread:172509 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_093849-2ys4guoc/files/wandb-summary.json
+2021-07-27 09:39:00,854 INFO    SenderThread:172509 [dir_watcher.py:finish():312] scan: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_093849-2ys4guoc/files
+2021-07-27 09:39:00,854 INFO    SenderThread:172509 [dir_watcher.py:finish():318] scan save: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_093849-2ys4guoc/files/wandb-summary.json wandb-summary.json
+2021-07-27 09:39:00,854 INFO    SenderThread:172509 [dir_watcher.py:finish():318] scan save: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_093849-2ys4guoc/files/output.log output.log
+2021-07-27 09:39:00,855 INFO    SenderThread:172509 [dir_watcher.py:finish():318] scan save: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_093849-2ys4guoc/files/config.yaml config.yaml
+2021-07-27 09:39:00,863 INFO    SenderThread:172509 [sender.py:transition_state():308] send defer: 6
+2021-07-27 09:39:00,867 DEBUG   SenderThread:172509 [sender.py:send_request():193] send_request: poll_exit
+2021-07-27 09:39:00,869 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: defer
+2021-07-27 09:39:00,869 INFO    HandlerThread:172509 [handler.py:handle_request_defer():141] handle defer: 6
+2021-07-27 09:39:00,874 DEBUG   SenderThread:172509 [sender.py:send_request():193] send_request: defer
+2021-07-27 09:39:00,875 INFO    SenderThread:172509 [sender.py:send_request_defer():304] handle sender defer: 6
+2021-07-27 09:39:00,875 INFO    SenderThread:172509 [file_pusher.py:finish():177] shutting down file pusher
+2021-07-27 09:39:00,970 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-27 09:39:00,971 DEBUG   SenderThread:172509 [sender.py:send_request():193] send_request: poll_exit
+2021-07-27 09:39:01,073 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-27 09:39:01,074 DEBUG   SenderThread:172509 [sender.py:send_request():193] send_request: poll_exit
+2021-07-27 09:39:01,177 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-27 09:39:01,177 DEBUG   SenderThread:172509 [sender.py:send_request():193] send_request: poll_exit
+2021-07-27 09:39:01,280 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-27 09:39:01,281 DEBUG   SenderThread:172509 [sender.py:send_request():193] send_request: poll_exit
+2021-07-27 09:39:01,383 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-27 09:39:01,384 DEBUG   SenderThread:172509 [sender.py:send_request():193] send_request: poll_exit
+2021-07-27 09:39:01,486 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-27 09:39:01,487 DEBUG   SenderThread:172509 [sender.py:send_request():193] send_request: poll_exit
+2021-07-27 09:39:01,590 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-27 09:39:01,590 DEBUG   SenderThread:172509 [sender.py:send_request():193] send_request: poll_exit
+2021-07-27 09:39:01,693 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-27 09:39:01,693 DEBUG   SenderThread:172509 [sender.py:send_request():193] send_request: poll_exit
+2021-07-27 09:39:01,788 INFO    Thread-13 :172509 [upload_job.py:push():137] Uploaded file /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_093849-2ys4guoc/files/config.yaml
+2021-07-27 09:39:01,796 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-27 09:39:01,796 DEBUG   SenderThread:172509 [sender.py:send_request():193] send_request: poll_exit
+2021-07-27 09:39:01,817 INFO    Thread-11 :172509 [upload_job.py:push():137] Uploaded file /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_093849-2ys4guoc/files/wandb-summary.json
+2021-07-27 09:39:01,821 INFO    Thread-12 :172509 [upload_job.py:push():137] Uploaded file /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_093849-2ys4guoc/files/output.log
+2021-07-27 09:39:01,899 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-27 09:39:01,900 DEBUG   SenderThread:172509 [sender.py:send_request():193] send_request: poll_exit
+2021-07-27 09:39:02,002 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-27 09:39:02,002 DEBUG   SenderThread:172509 [sender.py:send_request():193] send_request: poll_exit
+2021-07-27 09:39:02,022 INFO    Thread-7  :172509 [sender.py:transition_state():308] send defer: 7
+2021-07-27 09:39:02,023 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: defer
+2021-07-27 09:39:02,023 INFO    HandlerThread:172509 [handler.py:handle_request_defer():141] handle defer: 7
+2021-07-27 09:39:02,023 DEBUG   SenderThread:172509 [sender.py:send_request():193] send_request: defer
+2021-07-27 09:39:02,023 INFO    SenderThread:172509 [sender.py:send_request_defer():304] handle sender defer: 7
+2021-07-27 09:39:02,104 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-27 09:39:02,618 INFO    SenderThread:172509 [sender.py:transition_state():308] send defer: 8
+2021-07-27 09:39:02,618 DEBUG   SenderThread:172509 [sender.py:send_request():193] send_request: poll_exit
+2021-07-27 09:39:02,619 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: defer
+2021-07-27 09:39:02,619 INFO    HandlerThread:172509 [handler.py:handle_request_defer():141] handle defer: 8
+2021-07-27 09:39:02,619 DEBUG   SenderThread:172509 [sender.py:send_request():193] send_request: defer
+2021-07-27 09:39:02,620 INFO    SenderThread:172509 [sender.py:send_request_defer():304] handle sender defer: 8
+2021-07-27 09:39:02,620 INFO    SenderThread:172509 [sender.py:transition_state():308] send defer: 9
+2021-07-27 09:39:02,621 DEBUG   SenderThread:172509 [sender.py:send():179] send: final
+2021-07-27 09:39:02,621 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: defer
+2021-07-27 09:39:02,621 DEBUG   SenderThread:172509 [sender.py:send():179] send: footer
+2021-07-27 09:39:02,621 INFO    HandlerThread:172509 [handler.py:handle_request_defer():141] handle defer: 9
+2021-07-27 09:39:02,622 DEBUG   SenderThread:172509 [sender.py:send_request():193] send_request: defer
+2021-07-27 09:39:02,622 INFO    SenderThread:172509 [sender.py:send_request_defer():304] handle sender defer: 9
+2021-07-27 09:39:02,721 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: poll_exit
+2021-07-27 09:39:02,721 DEBUG   SenderThread:172509 [sender.py:send_request():193] send_request: poll_exit
+2021-07-27 09:39:02,722 INFO    SenderThread:172509 [file_pusher.py:join():182] waiting for file pusher
+2021-07-27 09:39:02,723 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: get_summary
+2021-07-27 09:39:02,726 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: sampled_history
+2021-07-27 09:39:02,727 DEBUG   HandlerThread:172509 [handler.py:handle_request():124] handle_request: shutdown
+2021-07-27 09:39:02,727 INFO    HandlerThread:172509 [handler.py:finish():638] shutting down handler
+2021-07-27 09:39:03,621 INFO    WriterThread:172509 [datastore.py:close():288] close: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_093849-2ys4guoc/run-2ys4guoc.wandb
+2021-07-27 09:39:03,722 INFO    SenderThread:172509 [sender.py:finish():945] shutting down sender
+2021-07-27 09:39:03,722 INFO    SenderThread:172509 [file_pusher.py:finish():177] shutting down file pusher
+2021-07-27 09:39:03,722 INFO    SenderThread:172509 [file_pusher.py:join():182] waiting for file pusher
+2021-07-27 09:39:03,725 INFO    MainThread:172509 [internal.py:handle_exit():78] Internal process exited

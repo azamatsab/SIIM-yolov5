@@ -1,0 +1,490 @@
+
+[34m[1mtrain: [39m[22mScanning '/data/aza_s/SIIM/dataset/coco_format/labels/train.cache' for images and labels... 5067 found, 0 missing, 0 empty, 0 corrupted: 100%|█| 5067/5067 [00:00<?, ?it/s]
+WARNING: --img-size 600 must be multiple of max stride 32, updating to 608
+[34m[1mval: [39m[22mScanning '/data/aza_s/SIIM/dataset/coco_format/labels/valid.cache' for images and labels... 1267 found, 0 missing, 0 empty, 0 corrupted: 100%|███| 1267/1267 [00:00<?, ?it/s]
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+Image sizes 608 train, 640 test
+Using 8 dataloader workers
+Logging results to runs/train/exp2
+Starting training for 300 epochs...
+     Epoch   gpu_mem       box       obj       cls     total   targets  img_size
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    47/299     14.5G   0.04916   0.02053    0.3024   0.06969        27       608: 100%|█████████████████████████████████████████████████████████| 317/317 [04:30<00:00,  1.17it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+               Class      Images     Targets           P           R      mAP@.5  mAP@.5:.95: 100%|███████████████████████████████████████████████| 40/40 [00:33<00:00,  1.20it/s]
+                 all    1.27e+03    1.98e+03       0.497        0.41       0.368       0.112
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 47 < 58; dropping {'train/box_loss': tensor(0.04916, device='cuda:0', grad_fn=<UnbindBackward>)}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 47 < 58; dropping {'train/obj_loss': tensor(0.02053, device='cuda:0', grad_fn=<UnbindBackward>)}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 47 < 58; dropping {'train/cls_loss': tensor(0.30242, device='cuda:0', grad_fn=<UnbindBackward>)}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 47 < 58; dropping {'metrics/precision': 0.4973774735961299}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 47 < 58; dropping {'metrics/recall': 0.4103987884906613}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 47 < 58; dropping {'metrics/mAP_0.5': 0.36754326645950103}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 47 < 58; dropping {'metrics/mAP_0.5:0.95': 0.11237707782682271}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 47 < 58; dropping {'val/box_loss': 0.05011553689837456}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 47 < 58; dropping {'val/obj_loss': 0.009860609658062458}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 47 < 58; dropping {'val/cls_loss': 0.0}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 47 < 58; dropping {'x/lr0': 0.009544814316924858}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 47 < 58; dropping {'x/lr1': 0.009544814316924858}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 47 < 58; dropping {'x/lr2': 0.009544814316924858}.
+Bin acc: 0.7127  0.0  0.7735999822616577  0.24230000376701355  0.039000000804662704. mAP: 0.284488650658567
+     Epoch   gpu_mem       box       obj       cls     total   targets  img_size
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    48/299     22.3G   0.04884   0.02047    0.3119   0.06931        23       608: 100%|█████████████████████████████████████████████████████████| 317/317 [04:16<00:00,  1.24it/s]
+
+
+
+
+
+
+
+
+
+
+
+               Class      Images     Targets           P           R      mAP@.5  mAP@.5:.95: 100%|███████████████████████████████████████████████| 40/40 [00:23<00:00,  1.73it/s]
+                 all    1.27e+03    1.98e+03       0.474       0.398       0.352        0.11
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 48 < 58; dropping {'train/box_loss': tensor(0.04884, device='cuda:0', grad_fn=<UnbindBackward>)}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 48 < 58; dropping {'train/obj_loss': tensor(0.02047, device='cuda:0', grad_fn=<UnbindBackward>)}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 48 < 58; dropping {'train/cls_loss': tensor(0.31186, device='cuda:0', grad_fn=<UnbindBackward>)}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 48 < 58; dropping {'metrics/precision': 0.474135557678086}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 48 < 58; dropping {'metrics/recall': 0.397778899545684}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 48 < 58; dropping {'metrics/mAP_0.5': 0.35219936421156117}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 48 < 58; dropping {'metrics/mAP_0.5:0.95': 0.10998155111069294}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 48 < 58; dropping {'val/box_loss': 0.050340473651885986}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 48 < 58; dropping {'val/obj_loss': 0.009890077635645866}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 48 < 58; dropping {'val/cls_loss': 0.0}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 48 < 58; dropping {'x/lr0': 0.009525213808259969}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 48 < 58; dropping {'x/lr1': 0.009525213808259969}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 48 < 58; dropping {'x/lr2': 0.009525213808259969}.
+Bin acc: 0.8043  0.0  0.8205000162124634  0.2980000078678131  0.11309999972581863. mAP: 0.31675987760353125
+     Epoch   gpu_mem       box       obj       cls     total   targets  img_size
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    49/299     22.3G   0.04875   0.01999    0.3202   0.06874        18       608: 100%|█████████████████████████████████████████████████████████| 317/317 [04:15<00:00,  1.24it/s]
+
+
+
+
+
+
+
+
+
+
+
+               Class      Images     Targets           P           R      mAP@.5  mAP@.5:.95: 100%|███████████████████████████████████████████████| 40/40 [00:22<00:00,  1.74it/s]
+                 all    1.27e+03    1.98e+03       0.531       0.392       0.371       0.112
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 49 < 58; dropping {'train/box_loss': tensor(0.04875, device='cuda:0', grad_fn=<UnbindBackward>)}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 49 < 58; dropping {'train/obj_loss': tensor(0.01999, device='cuda:0', grad_fn=<UnbindBackward>)}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 49 < 58; dropping {'train/cls_loss': tensor(0.32020, device='cuda:0', grad_fn=<UnbindBackward>)}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 49 < 58; dropping {'metrics/precision': 0.5308583048844905}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 49 < 58; dropping {'metrics/recall': 0.3917213528520949}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 49 < 58; dropping {'metrics/mAP_0.5': 0.37109480465647304}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 49 < 58; dropping {'metrics/mAP_0.5:0.95': 0.11236820511283807}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 49 < 58; dropping {'val/box_loss': 0.05025404691696167}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 49 < 58; dropping {'val/obj_loss': 0.009968236088752747}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 49 < 58; dropping {'val/cls_loss': 0.0}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 49 < 58; dropping {'x/lr0': 0.009505226720175454}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 49 < 58; dropping {'x/lr1': 0.009505226720175454}.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 49 < 58; dropping {'x/lr2': 0.009505226720175454}.
+Bin acc: 0.6835  0.0  0.8126999735832214  0.2485000044107437  0.0746999979019165. mAP: 0.30139895611047096
+     Epoch   gpu_mem       box       obj       cls     total   targets  img_size
+
+
+

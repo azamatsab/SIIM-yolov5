@@ -1,0 +1,121 @@
+2021-07-27 10:58:50,169 INFO    MainThread:131966 [internal.py:wandb_internal():91] W&B internal server running at pid: 131966, started at: 2021-07-27 10:58:50.149920
+2021-07-27 10:58:50,174 DEBUG   HandlerThread:131966 [handler.py:handle_request():124] handle_request: check_version
+2021-07-27 10:58:50,174 DEBUG   SenderThread:131966 [sender.py:send():179] send: header
+2021-07-27 10:58:50,175 DEBUG   SenderThread:131966 [sender.py:send_request():193] send_request: check_version
+2021-07-27 10:58:50,178 INFO    WriterThread:131966 [datastore.py:open_for_write():80] open: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/run-qycepe9f.wandb
+2021-07-27 10:58:50,566 DEBUG   SenderThread:131966 [sender.py:send():179] send: run
+2021-07-27 10:58:50,580 INFO    SenderThread:131966 [sender.py:_maybe_setup_resume():414] checking resume status for None/YOLOv5/qycepe9f
+2021-07-27 10:58:51,324 INFO    SenderThread:131966 [dir_watcher.py:__init__():168] watching files in: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files
+2021-07-27 10:58:51,324 INFO    SenderThread:131966 [sender.py:_start_run_threads():719] run started: qycepe9f with start time 1627383529
+2021-07-27 10:58:51,326 DEBUG   SenderThread:131966 [sender.py:send():179] send: summary
+2021-07-27 10:58:51,326 INFO    SenderThread:131966 [sender.py:_save_file():841] saving file wandb-summary.json with policy end
+2021-07-27 10:58:51,332 DEBUG   HandlerThread:131966 [handler.py:handle_request():124] handle_request: run_start
+2021-07-27 10:58:51,342 DEBUG   HandlerThread:131966 [meta.py:__init__():39] meta init
+2021-07-27 10:58:51,342 DEBUG   HandlerThread:131966 [meta.py:__init__():53] meta init done
+2021-07-27 10:58:51,342 DEBUG   HandlerThread:131966 [meta.py:probe():210] probe
+2021-07-27 10:58:51,351 DEBUG   HandlerThread:131966 [meta.py:_setup_git():200] setup git
+2021-07-27 10:58:51,372 DEBUG   HandlerThread:131966 [meta.py:_setup_git():207] setup git done
+2021-07-27 10:58:51,372 DEBUG   HandlerThread:131966 [meta.py:_save_pip():57] save pip
+2021-07-27 10:58:51,373 DEBUG   HandlerThread:131966 [meta.py:_save_pip():71] save pip done
+2021-07-27 10:58:51,373 DEBUG   HandlerThread:131966 [meta.py:_save_conda():78] save conda
+2021-07-27 10:58:52,325 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_created():216] file/dir created: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/wandb-summary.json
+2021-07-27 10:58:52,326 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_created():216] file/dir created: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/requirements.txt
+2021-07-27 10:58:52,326 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_created():216] file/dir created: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/conda-environment.yaml
+2021-07-27 10:58:54,102 DEBUG   HandlerThread:131966 [meta.py:_save_conda():86] save conda done
+2021-07-27 10:58:54,102 DEBUG   HandlerThread:131966 [meta.py:probe():252] probe done
+2021-07-27 10:58:54,146 DEBUG   SenderThread:131966 [sender.py:send():179] send: files
+2021-07-27 10:58:54,147 INFO    SenderThread:131966 [sender.py:_save_file():841] saving file wandb-metadata.json with policy now
+2021-07-27 10:58:54,155 DEBUG   HandlerThread:131966 [handler.py:handle_request():124] handle_request: stop_status
+2021-07-27 10:58:54,156 DEBUG   SenderThread:131966 [sender.py:send_request():193] send_request: stop_status
+2021-07-27 10:58:54,325 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/conda-environment.yaml
+2021-07-27 10:58:54,326 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_created():216] file/dir created: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:58:54,326 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_created():216] file/dir created: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/wandb-metadata.json
+2021-07-27 10:58:55,011 INFO    Thread-11 :131966 [upload_job.py:push():137] Uploaded file /tmp/tmpjejr9g1hwandb/3rf2b8zl-wandb-metadata.json
+2021-07-27 10:58:56,326 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:58:58,327 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:59:02,330 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:59:04,331 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:59:06,332 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:59:08,333 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:59:09,539 DEBUG   HandlerThread:131966 [handler.py:handle_request():124] handle_request: stop_status
+2021-07-27 10:59:09,539 DEBUG   SenderThread:131966 [sender.py:send_request():193] send_request: stop_status
+2021-07-27 10:59:10,334 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:59:12,335 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:59:14,336 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:59:16,337 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:59:18,338 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:59:21,340 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:59:23,146 DEBUG   SenderThread:131966 [sender.py:send():179] send: stats
+2021-07-27 10:59:23,340 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:59:24,895 DEBUG   HandlerThread:131966 [handler.py:handle_request():124] handle_request: stop_status
+2021-07-27 10:59:24,896 DEBUG   SenderThread:131966 [sender.py:send_request():193] send_request: stop_status
+2021-07-27 10:59:25,341 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:59:27,342 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:59:29,344 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:59:31,345 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:59:33,346 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:59:35,347 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:59:37,348 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:59:39,349 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:59:40,245 DEBUG   HandlerThread:131966 [handler.py:handle_request():124] handle_request: stop_status
+2021-07-27 10:59:40,245 DEBUG   SenderThread:131966 [sender.py:send_request():193] send_request: stop_status
+2021-07-27 10:59:41,353 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:59:43,354 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:59:45,355 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:59:47,357 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:59:49,357 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:59:51,359 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:59:53,359 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:59:55,361 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:59:55,594 DEBUG   HandlerThread:131966 [handler.py:handle_request():124] handle_request: stop_status
+2021-07-27 10:59:55,595 DEBUG   SenderThread:131966 [sender.py:send_request():193] send_request: stop_status
+2021-07-27 10:59:56,771 DEBUG   SenderThread:131966 [sender.py:send():179] send: stats
+2021-07-27 10:59:57,362 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 10:59:59,363 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 11:00:01,364 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 11:00:03,365 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 11:00:04,366 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 11:00:05,366 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 11:00:10,780 DEBUG   SenderThread:131966 [sender.py:send():179] send: files
+2021-07-27 11:00:10,781 INFO    SenderThread:131966 [sender.py:_save_file():841] saving file media/images/Labels_0_0.jpg with policy now
+2021-07-27 11:00:10,782 DEBUG   SenderThread:131966 [sender.py:send():179] send: files
+2021-07-27 11:00:10,783 INFO    SenderThread:131966 [sender.py:_save_file():841] saving file media/images/Labels_0_1.jpg with policy now
+2021-07-27 11:00:10,784 DEBUG   SenderThread:131966 [sender.py:send():179] send: files
+2021-07-27 11:00:10,784 INFO    SenderThread:131966 [sender.py:_save_file():841] saving file media/images/Mosaics_0_0.jpg with policy now
+2021-07-27 11:00:10,784 DEBUG   SenderThread:131966 [sender.py:send():179] send: files
+2021-07-27 11:00:10,784 INFO    SenderThread:131966 [sender.py:_save_file():841] saving file media/images/Mosaics_0_1.jpg with policy now
+2021-07-27 11:00:10,793 DEBUG   SenderThread:131966 [sender.py:send():179] send: files
+2021-07-27 11:00:10,793 INFO    SenderThread:131966 [sender.py:_save_file():841] saving file media/images/Mosaics_0_2.jpg with policy now
+2021-07-27 11:00:10,794 DEBUG   SenderThread:131966 [sender.py:send():179] send: history
+2021-07-27 11:00:10,795 DEBUG   SenderThread:131966 [sender.py:send():179] send: summary
+2021-07-27 11:00:10,828 INFO    SenderThread:131966 [sender.py:_save_file():841] saving file wandb-summary.json with policy end
+2021-07-27 11:00:10,953 DEBUG   HandlerThread:131966 [handler.py:handle_request():124] handle_request: stop_status
+2021-07-27 11:00:10,954 DEBUG   SenderThread:131966 [sender.py:send_request():193] send_request: stop_status
+2021-07-27 11:00:11,369 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/wandb-summary.json
+2021-07-27 11:00:11,370 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_created():216] file/dir created: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/media/images/Labels_0_0.jpg
+2021-07-27 11:00:11,370 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_created():216] file/dir created: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/media/images/Mosaics_0_2.jpg
+2021-07-27 11:00:11,371 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_created():216] file/dir created: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/media/images/Mosaics_0_1.jpg
+2021-07-27 11:00:11,371 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_created():216] file/dir created: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/media/images/Mosaics_0_0.jpg
+2021-07-27 11:00:11,371 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_created():216] file/dir created: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/media/images/Labels_0_1.jpg
+2021-07-27 11:00:11,371 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_created():216] file/dir created: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/media
+2021-07-27 11:00:11,371 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_created():216] file/dir created: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/media/images
+2021-07-27 11:00:12,184 INFO    Thread-14 :131966 [upload_job.py:push():137] Uploaded file /tmp/tmpjejr9g1hwandb/2i5w8hle-media/images/Mosaics_0_0.jpg
+2021-07-27 11:00:12,195 INFO    Thread-12 :131966 [upload_job.py:push():137] Uploaded file /tmp/tmpjejr9g1hwandb/maomue15-media/images/Labels_0_0.jpg
+2021-07-27 11:00:12,197 INFO    Thread-15 :131966 [upload_job.py:push():137] Uploaded file /tmp/tmpjejr9g1hwandb/k444hpp1-media/images/Mosaics_0_1.jpg
+2021-07-27 11:00:12,253 INFO    Thread-13 :131966 [upload_job.py:push():137] Uploaded file /tmp/tmpjejr9g1hwandb/2oda2l4r-media/images/Labels_0_1.jpg
+2021-07-27 11:00:12,371 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 11:00:13,371 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 11:00:15,372 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 11:00:17,150 INFO    Thread-16 :131966 [upload_job.py:push():137] Uploaded file /tmp/tmpjejr9g1hwandb/fnbpxqis-media/images/Mosaics_0_2.jpg
+2021-07-27 11:00:17,377 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 11:00:19,380 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 11:00:21,381 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 11:00:23,034 WARNING MainThread:131966 [internal.py:wandb_internal():147] Internal process interrupt: 1
+2021-07-27 11:00:23,213 WARNING MainThread:131966 [internal.py:wandb_internal():147] Internal process interrupt: 2
+2021-07-27 11:00:23,213 ERROR   MainThread:131966 [internal.py:wandb_internal():150] Internal process interrupted.
+2021-07-27 11:00:23,383 INFO    Thread-8  :131966 [dir_watcher.py:_on_file_modified():229] file/dir modified: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/files/output.log
+2021-07-27 11:00:23,597 INFO    WriterThread:131966 [datastore.py:close():288] close: /data/aza_s/SIIM/flexible-yolov5/wandb/run-20210727_105849-qycepe9f/run-qycepe9f.wandb
+2021-07-27 11:00:23,597 INFO    SenderThread:131966 [sender.py:finish():945] shutting down sender
+2021-07-27 11:00:23,598 INFO    HandlerThread:131966 [handler.py:finish():638] shutting down handler
+2021-07-27 11:00:23,598 INFO    SenderThread:131966 [dir_watcher.py:finish():282] shutting down directory watcher
+2021-07-27 11:00:24,160 INFO    MainThread:131966 [internal.py:handle_exit():78] Internal process exited

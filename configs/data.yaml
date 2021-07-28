@@ -1,0 +1,5 @@
+names: [none, negative, typical, indeterminate, atypical] 
+# "negative", "typical", "indeterminate", "atypical"
+nc: 5 
+train: /data/aza_s/SIIM/dataset/coco_format/images/train
+val: /data/aza_s/SIIM/dataset/coco_format/images/valid

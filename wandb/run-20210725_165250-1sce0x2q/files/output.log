@@ -1,0 +1,57 @@
+[34m[1mtrain: [39m[22mScanning '/data/aza_s/SIIM/dataset/coco_format/labels/train.cache' for images and labels... 5067 found, 0 missing, 0 empty, 0 corrupted: 100%|███████████████████████████| 5067/5067 [00:00<?, ?it/s]
+[34m[1mval: [39m[22mScanning '/data/aza_s/SIIM/dataset/coco_format/labels/valid.cache' for images and labels... 1267 found, 0 missing, 0 empty, 0 corrupted: 100%|█████████████████████████████| 1267/1267 [00:00<?, ?it/s]
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+Plotting labels...
+[34m[1mautoanchor: [39m[22mEvolving anchors with Genetic Algorithm: fitness = 0.8456:  15%|█████████████▍                                                                             | 147/1000 [00:00<00:00, 1460.53it/s]
+[34m[1mautoanchor: [39m[22mAnalyzing anchors... anchors/target = 3.44, Best Possible Recall (BPR) = 0.7931. Attempting to improve anchors, please wait...
+[34m[1mautoanchor: [39m[22mWARNING: Extremely small objects found. 1637 of 7912 labels are < 3 pixels in size.
+[34m[1mautoanchor: [39m[22mRunning kmeans for 9 anchors on 6275 points...
+[34m[1mautoanchor: [39m[22mthr=0.25: 0.7926 best possible recall, 6.87 anchors past thr
+[34m[1mautoanchor: [39m[22mEvolving anchors with Genetic Algorithm: fitness = 0.8486: 100%|██████████████████████████████████████████████████████████████████████████████████████████| 1000/1000 [00:00<00:00, 1200.18it/s]
+Image sizes 640 train, 640 test
+Using 8 dataloader workers
+Logging results to runs/train/exp37
+Starting training for 300 epochs...
+     Epoch   gpu_mem       box       obj       cls     total   targets  img_size
+  0%|                                                                                                                                                                               | 0/634 [00:00<?, ?it/s]
+[34m[1mautoanchor: [39m[22mthr=0.25: 0.7927 best possible recall, 6.84 anchors past thr
+[34m[1mautoanchor: [39m[22mn=9, img_size=640, metric_all=0.447/0.673-mean/best, past_thr=0.580-mean: 69,87,  103,118,  91,181,  154,151,  109,271,  141,229,  184,262,  154,333,  211,388
+
+
+
+
+
+
+
+
+     0/299       19G    0.1026   0.03782    0.6812    0.1404        14       800:   1%|█                                                                                    | 8/634 [00:36<47:11,  4.52s/it]
+Traceback (most recent call last):
+  File "scripts/train.py", line 532, in <module>
+    train(hyp, opt, device, tb_writer, wandb)
+  File "scripts/train.py", line 294, in train
+    out = model(imgs)  # forward
+  File "/home/ubuntu/miniconda3/envs/temp/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "./od/models/model.py", line 70, in forward
+    out = self.backbone(x)
+  File "/home/ubuntu/miniconda3/envs/temp/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "./od/models/backbone/efficientnet/model.py", line 314, in forward
+    x = self.extract_endpoints(inputs)
+  File "./od/models/backbone/efficientnet/model.py", line 269, in extract_endpoints
+    x = self._swish(self._bn1(self._conv_head(x)))
+  File "/home/ubuntu/miniconda3/envs/temp/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "./od/models/backbone/efficientnet/utils.py", line 76, in forward
+    return SwishImplementation.apply(x)
+  File "./od/models/backbone/efficientnet/utils.py", line 64, in forward
+    result = i * torch.sigmoid(i)
+RuntimeError: CUDA out of memory. Tried to allocate 30.00 MiB (GPU 0; 23.65 GiB total capacity; 22.31 GiB already allocated; 4.00 MiB free; 22.48 GiB reserved in total by PyTorch)
+Images sizes do not match. This will causes images to be display incorrectly in the UI.
