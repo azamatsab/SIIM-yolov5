@@ -72,8 +72,8 @@ def create_img_string(bboxes, scores):
 
 if __name__ == '__main__':
     IMG_SIZE = 640
-    pt_path = '/data/aza_s/SIIM/flexible-yolov5/runs/train/exp2/weights/best.pt'
-    model = Detector(pt_path, None, IMG_SIZE, xcycwh=False)
+    pt_path = '/data/aza_s/SIIM/flexible-yolov5/runs/train/exp39/weights/best.pt'
+    model = Detector(pt_path, None, IMG_SIZE, xcycwh=False, device=6)
     imgs_root = '/data/zhan/compets/siim_covid/input/test_dcm'
     sub_df_path = '/data/zhan/compets/siim_covid/input/sample_submission.csv'
     imgs = os.listdir(imgs_root)
@@ -105,19 +105,22 @@ if __name__ == '__main__':
         new_imgs.append(name)
         if 'study' in name:
             imgs = study_to_img[name.split('_')[0]]
+            classes = []
             assemble = []
             for img_hash in imgs:
                 img_path = img_to_path[img_hash]
                 bboxes, scores, probs = detect(model, img_path, IMG_SIZE)
                 img_level = img_path.split('/')[-1][:-4] + '_image'
                 preds[img_level] = create_img_string(bboxes, scores)
+                classes.append(np.argmax(probs))
                 assemble.append(probs)
             probs = np.concatenate(assemble, 0).max(axis=0)
             study_str = ''
             for i in range(4):
                 if study_str != '':
                     study_str += ' '
-                study_str += ID_TO_NAME[i] + f'{probs[i]}' + D_BOX
+                if i in classes:
+                    study_str += ID_TO_NAME[i] + f'{probs[i]}' + D_BOX
             strings.append(study_str)
         else:
             if name not in preds:

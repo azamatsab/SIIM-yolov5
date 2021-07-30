@@ -9,7 +9,7 @@ from utils.torch_utils import *
 
 
 class Detector(object):
-    def __init__(self, pt_path, namesfile, img_size, conf_thres=0.4, iou_thres=0.3, classes=0, agnostic_nms=False,
+    def __init__(self, pt_path, namesfile, img_size, conf_thres=0.0005, iou_thres=0.5, classes=0, agnostic_nms=False,
                  xcycwh=True, device=0):
         self.pt_path = pt_path
         self.img_size = img_size
@@ -92,7 +92,7 @@ class Detector(object):
                         bboxes.append([x_min, y_min, x_max, y_max])
                     scores.append(score)
                     ids.append(clas)
-        probs = torch.sigmoid(ml_pred).detach().cpu().numpy()
+        probs = torch.softmax(ml_pred, dim=-1).detach().cpu().numpy()
         return np.asarray(bboxes), np.asarray(scores), probs
 
     @SPLITINFERENCE(split_width=2, split_height=1)
@@ -128,7 +128,7 @@ class Detector(object):
 
 
 if __name__ == '__main__':
-    pt_path = '/data/aza_s/SIIM/flexible-yolov5/runs/train/exp2/weights/best.pt'
+    pt_path = '/data/aza_s/SIIM/flexible-yolov5/runs/train/exp39/weights/best.pt'
     model = Detector(pt_path, None, 640, xcycwh=False)
     imgs_root = '/data/aza_s/SIIM/dataset/test'
     imgs = os.listdir(imgs_root)
