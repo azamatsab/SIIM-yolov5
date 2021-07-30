@@ -233,8 +233,7 @@ def train(hyp, opt, device, tb_writer=None, wandb=None):
     scheduler.last_epoch = start_epoch - 1  # do not move
     scaler = amp.GradScaler(enabled=cuda)
     compute_loss = ComputeLoss(model)  # init loss class
-    std_loss = torch.nn.BCEWithLogitsLoss()
-    bin_loss = torch.nn.BCEWithLogitsLoss()
+    std_loss = torch.nn.CrossEntropyLoss()
     logger.info(f'Image sizes {imgsz} train, {imgsz_test} test\n'
                 f'Using {dataloader.num_workers} dataloader workers\n'
                 f'Logging results to {save_dir}\n'
@@ -294,12 +293,11 @@ def train(hyp, opt, device, tb_writer=None, wandb=None):
             # Forward
             with amp.autocast(enabled=cuda):
                 out = model(imgs)  # forward
-                pred, cls_pred, bin_pred = out[0], out[1], out[2]
+                pred, cls_pred = out[0], out[1]
                 loss, loss_items = compute_loss(pred, targets.to(device))  # loss scaled by batch_size
                 std_cls_loss = std_loss(cls_pred, img_labels.to(device))
-                std_bin_loss = bin_loss(bin_pred, bin_labels.unsqueeze(1).to(device))
-                loss_items[2] = std_bin_loss
-                loss = 0.4 * std_cls_loss + 0.1 * std_bin_loss + loss
+                loss_items[2] = std_cls_loss
+                loss = 0.1 * std_cls_loss + loss
                 if rank != -1:
                     loss *= opt.world_size  # gradient averaged between devices in DDP mode
                 if opt.quad:
@@ -360,11 +358,11 @@ def train(hyp, opt, device, tb_writer=None, wandb=None):
                                                  plots=plots and final_epoch,
                                                  log_imgs=opt.log_imgs if wandb else 0,
                                                  compute_loss=compute_loss)
-            print(f"Bin acc: {aucs[0]}  {aucs[1]}  {aucs[2]}  {aucs[3]}  {aucs[4]}. mAP: {np.mean(aucs[1:])}")
+            print(f"Bin acc: {aucs[0]}  {aucs[1]}  {aucs[2]}  {aucs[3]} mAP: {np.mean(aucs[1:])}")
             # Write
             with open(results_file, 'a') as f:
                 f.write(s + '%10.4g' * 7 % results + '\n')  # P, R, mAP@.5, mAP@.5-.95, val_loss(box, obj, cls)
-                f.write(f"Bin acc: {aucs[0]}  {aucs[1]}  {aucs[2]}  {aucs[3]}  {aucs[4]}. mAP: {np.mean(aucs[1:])}\n")
+                f.write(f"Bin acc: {aucs[0]}  {aucs[1]}  {aucs[2]}  {aucs[3]}  {aucs[4]} {aucs[5]}. mAP: {np.mean(aucs[2:])}\n")
 
             if len(opt.name) and opt.bucket:
                 os.system('gsutil cp %s gs://%s/results/results%s.txt' % (results_file, opt.bucket, opt.name))
@@ -381,8 +379,10 @@ def train(hyp, opt, device, tb_writer=None, wandb=None):
                     wandb.log({tag: x}, step=epoch, commit=tag == tags[-1])  # W&B
 
             # Update best mAP
-            fi = fitness(np.array(results).reshape(1, -1))  # weighted combination of [P, R, mAP@.5, mAP@.5-.95]
+            # fi = fitness(np.array(results).reshape(1, -1))  # weighted combination of [P, R, mAP@.5, mAP@.5-.95]
+            fi = results[2]  # weighted combination of [P, R, mAP@.5, mAP@.5-.95]
             if fi > best_fitness:
+                logger.info(f"Change best model, map: {fi}")
                 best_fitness = fi
 
             # Save model
@@ -455,7 +455,7 @@ if __name__ == '__main__':
     parser.add_argument('--hyp', type=str, default='configs/hyp.scratch.yaml', help='hyperparameters path')
     parser.add_argument('--epochs', type=int, default=300)
     parser.add_argument('--batch-size', type=int, default=16, help='total batch size for all GPUs')
-    parser.add_argument('--img-size', nargs='+', type=int, default=[640, 640], help='[train, test] image sizes')
+    parser.add_argument('--img-size', nargs='+', type=int, default=[512, 512], help='[train, test] image sizes')
     parser.add_argument('--rect', action='store_true', help='rectangular training')
     parser.add_argument('--resume', nargs='?', const=True, default=False, help='resume most recent training')
     parser.add_argument('--nosave', action='store_true', help='only save final checkpoint')
@@ -524,12 +524,13 @@ if __name__ == '__main__':
 
     # Train
     logger.info(opt)
-    try:
-        import wandb
-    except ImportError:
-        wandb = None
-        prefix = colorstr('wandb: ')
-        logger.info(f"{prefix}Install Weights & Biases for YOLOv5 logging with 'pip install wandb' (recommended)")
+    # try:
+    #     import wandb
+    # except ImportError:
+    #     wandb = None
+    #     prefix = colorstr('wandb: ')
+    #     logger.info(f"{prefix}Install Weights & Biases for YOLOv5 logging with 'pip install wandb' (recommended)")
+    wandb = None
     if not opt.evolve:
         tb_writer = None  # init loggers
         if opt.global_rank in [-1, 0]:

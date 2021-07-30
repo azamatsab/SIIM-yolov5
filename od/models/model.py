@@ -39,8 +39,6 @@ class Model(nn.Module):
         self._avg_pooling = nn.AdaptiveAvgPool2d(1)
         self._fc = nn.Linear(backbone_out['C5_size'], 4)
         self._dropout = nn.Dropout(0.6)
-        self._fc2 = nn.Linear(backbone_out['C5_size'], 1)
-        self._dropout2 = nn.Dropout(0.6)
 
         initialize_weights(self)
 
@@ -75,13 +73,10 @@ class Model(nn.Module):
         x_cls = self._dropout(x)
         x_cls = self._fc(x_cls)
 
-        x_bin = self._dropout2(x)
-        x_bin = self._fc2(x_bin)
-
         out = self.fpn(out)
         out = self.pan(out)
         y = self.detection(list(out))
-        return y, x_cls, x_bin
+        return y, x_cls
 
 
 if __name__ == '__main__':

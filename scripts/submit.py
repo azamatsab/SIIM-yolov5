@@ -1,6 +1,10 @@
 import sys
+import os
 import glob
 
+import torch
+import numpy as np
+import cv2
 import tqdm
 import pandas as pd
 from PIL import Image
@@ -8,11 +12,6 @@ import pydicom
 from pydicom.pixel_data_handlers.util import apply_voi_lut
 
 sys.path.append('.')
-from od.models.modules.experimental import *
-from od.data.datasets import letterbox
-from utils.general import *
-from utils.split_detector import SPLITINFERENCE
-from utils.torch_utils import *
 from scripts.detector import Detector
 
 

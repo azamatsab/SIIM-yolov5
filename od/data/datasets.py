@@ -505,6 +505,7 @@ class LoadImagesAndLabels(Dataset):  # for training/testing
         mosaic = self.mosaic and random.random() < hyp['mosaic']
         if mosaic:
             img, labels = load_mosaic(self, index)
+            mosaic_label = labels.copy()
             shapes = None
             if random.random() < hyp['mixup']:
                 img2, labels2 = load_mosaic(self, random.randint(0, self.n - 1))
@@ -543,13 +544,11 @@ class LoadImagesAndLabels(Dataset):  # for training/testing
                 if nL:
                     labels[:, 1] = 1 - labels[:, 1]
         labels_out = torch.zeros((nL, 6))
+
         img_labels = torch.zeros(5)
         img_labels[labels[:, 0]] = 1
-        if (labels[:, 0] == 0).all():
-            img_labels[0] = 1
-        for i in range(labels.shape[0]):
-            if labels[i][0] > 1:
-                labels[i][0] = 1
+        if img_labels.sum() == 0:
+            img_labels[1] = 1    
         if nL:
             labels_out[:, 1:] = torch.from_numpy(labels)
         img = img[:, :, ::-1].transpose(2, 0, 1)
@@ -564,9 +563,10 @@ class LoadImagesAndLabels(Dataset):  # for training/testing
         img, label, path, shapes, img_labels = zip(*batch)  # transposed
         for i, l in enumerate(label):
             l[:, 0] = i  # add target image index for build_targets()
-        img_cls_l = [label[1:] for label in img_labels]
+        img_cls_l = [np.where(label[1:] == 1)[0][0] for label in img_labels]
+        # print(img_cls_l)
         bin_l = [label[0] for label in img_labels]
-        return torch.stack(img, 0), torch.cat(label, 0), path, shapes, torch.stack(img_cls_l, 0), torch.stack(bin_l, 0)
+        return torch.stack(img, 0), torch.cat(label, 0), path, shapes, torch.tensor(img_cls_l), torch.stack(bin_l, 0)
 
     @staticmethod
     def collate_fn4(batch):
@@ -596,9 +596,9 @@ class LoadImagesAndLabels(Dataset):  # for training/testing
         for i, l in enumerate(label4):
             l[:, 0] = i  # add target image index for build_targets()
 
-        img_cls_l = [label[1:] for label in im_label4]
+        img_cls_l = [np.where(label[1:] == 1) for label in img_labels]
         bin_l = [label[0] for label in im_label4]
-        return torch.stack(img4, 0), torch.cat(label4, 0), path4, shapes4, torch.stack(img_cls_l, 0), torch.stack(bin_l, 0)
+        return torch.stack(img4, 0), torch.cat(label4, 0), path4, shapes4, torch.tensor(img_cls_l), torch.stack(bin_l, 0)
 
 
 # Ancillary functions --------------------------------------------------------------------------------------------------

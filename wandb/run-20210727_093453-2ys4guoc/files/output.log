@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "scripts/train.py", line 539, in <module>
-    train(hyp, opt, device, tb_writer, wandb)
-  File "scripts/train.py", line 164, in train
-    del ckpt, state_dict
-UnboundLocalError: local variable 'state_dict' referenced before assignment

@@ -110,7 +110,7 @@ def test(data,
         with torch.no_grad():
             # Run model
             t = time_synchronized()
-            (inf_out, train_out), ml_out, bin_out = model(img)  # inference and training outputs
+            (inf_out, train_out), ml_out = model(img)  # inference and training outputs
             t0 += time_synchronized() - t
 
             # Compute loss
@@ -118,10 +118,14 @@ def test(data,
                 loss += compute_loss([x.float() for x in train_out], targets)[1][:3]  # box, obj, cls
 
             # Accumulate preds
-            ml_pred.extend(torch.sigmoid(ml_out).detach().cpu().numpy())
-            bin_pred.extend(torch.sigmoid(bin_out).view(-1).detach().cpu().numpy())
-            ml_tar.extend(img_labels.numpy())
-            bin_tar.extend(bin_labels.view(-1).numpy())
+            ml_pred.extend(torch.softmax(ml_out, dim=-1).detach().cpu().numpy())
+            ml_labels = []
+            img_labels = img_labels.numpy()
+            for i in range(img_labels.shape[0]):
+                oh_label = np.zeros(4)
+                oh_label[img_labels[i]] = 1
+                ml_labels.append(oh_label)
+            ml_tar.extend(ml_labels)
 
             # Run NMS
             targets[:, 2:] *= torch.Tensor([width, height, width, height]).to(device)  # to pixels
@@ -215,7 +219,7 @@ def test(data,
             stats.append((correct.cpu(), pred[:, 4].cpu(), pred[:, 5].cpu(), tcls))
 
         # Plot images
-        if plots and batch_i < 3:
+        if plots and batch_i < 4:
             f = save_dir / f'test_batch{batch_i}_labels.jpg'  # labels
             Thread(target=plot_images, args=(img, targets, paths, f, names), daemon=True).start()
             f = save_dir / f'test_batch{batch_i}_pred.jpg'  # predictions
@@ -286,19 +290,15 @@ def test(data,
     for i, c in enumerate(ap_class):
         maps[c] = ap[i]
 
-    bin_pred = np.array(bin_pred)
-    bin_pred[bin_pred > 0.5] = 1
-    bin_pred[bin_pred <= 0.5] = 0
+    aucs = [0]
 
-    bin_auc = round(accuracy_score(bin_tar, list(bin_pred)), 4)
-    aucs = [bin_auc]
     for i in range(4):
         true = [tar[i] for tar in ml_tar]
         auc = average_precision_score(true, [pred[i] for pred in ml_pred])
         aucs.append(round(auc, 4))
-    aucs.append(map50)
+    aucs += [map50, map50]
     if not training:
-        print(aucs)
+        print(aucs, np.mean(aucs[1:]))
     return (mp, mr, map50, map, *(loss.cpu() / len(dataloader)).tolist()), maps, t, aucs
 
 
@@ -308,7 +308,7 @@ if __name__ == '__main__':
     parser.add_argument('--data', type=str, default='configs/data.yaml', help='*.data path')
     parser.add_argument('--batch-size', type=int, default=32, help='size of each image batch')
     parser.add_argument('--img-size', type=int, default=640, help='inference size (pixels)')
-    parser.add_argument('--conf-thres', type=float, default=0.001, help='object confidence threshold')
+    parser.add_argument('--conf-thres', type=float, default=0.0005, help='object confidence threshold')
     parser.add_argument('--iou-thres', type=float, default=0.5, help='IOU threshold for NMS')
     parser.add_argument('--task', default='val', help="'val', 'test', 'study'")
     parser.add_argument('--device', default='', help='cuda device, i.e. 0 or 0,1,2,3 or cpu')
